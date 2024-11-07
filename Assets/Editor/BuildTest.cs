@@ -16,7 +16,6 @@ class BuildTest
 
     private static string[] FindEnabledEditorScenes()
     {
-
         List<string> EditorScenes = new List<string>();
         foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
         {
