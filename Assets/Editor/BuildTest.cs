@@ -11,6 +11,7 @@ class BuildTest
     [MenuItem("Build/Test")]
     static void PerformBuild()
     {
+
         BuildPipeline.BuildPlayer(FindEnabledEditorScenes(), "Builds/MyGame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
     }
 
