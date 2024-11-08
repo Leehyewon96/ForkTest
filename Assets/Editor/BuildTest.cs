@@ -13,7 +13,6 @@ class BuildTest
     {
         BuildPipeline.BuildPlayer(FindEnabledEditorScenes(), "Builds/MyGame.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
     }
-
     private static string[] FindEnabledEditorScenes()
     {
         List<string> EditorScenes = new List<string>();
