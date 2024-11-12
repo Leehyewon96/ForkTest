@@ -25,11 +25,16 @@ class BuildTest
         return EditorScenes.ToArray();
     }
 
-    [MenuItem("Build/BundleBuildTest")]
-    public void BuildAllAssetBundles()
+    [UnityEditor.MenuItem("Assets/Build All Asset Bundles")]
+    static void BuildAllAssetBundles()
     {
-        string path = Application.dataPath + "/AssetBundles";
-        BuildPipeline.BuildAssetBundles(path, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows);
+        string assetBundleDir = "Assets/AssetBundles";
+
+        if (!Directory.Exists(Application.streamingAssetsPath))
+        {
+            Directory.CreateDirectory(assetBundleDir);
+        }
+        BuildPipeline.BuildAssetBundles(assetBundleDir, BuildAssetBundleOptions.None, EditorUserBuildSettings.activeBuildTarget);
     }
 
     public void BuildNeedAssetBundle(string bundleName)
