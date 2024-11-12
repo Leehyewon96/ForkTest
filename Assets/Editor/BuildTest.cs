@@ -25,6 +25,7 @@ class BuildTest
         return EditorScenes.ToArray();
     }
 
+
     [UnityEditor.MenuItem("Assets/Build All Asset Bundles")]
     static void BuildAllAssetBundles()
     {
